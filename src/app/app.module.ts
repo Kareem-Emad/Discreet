@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import {HomeComponent} from './home/home.component'
 
 import {
   MatAutocompleteModule,
@@ -37,14 +38,21 @@ import {
   MatTooltipModule,
   MatStepperModule,
 } from '@angular/material';
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -76,7 +84,8 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
