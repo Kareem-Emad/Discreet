@@ -42,17 +42,20 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { GroupComponent } from './group/group.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent}
+  { path: 'home', component: HomeComponent},
+  { path: 'groups',component: GroupComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    GroupComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

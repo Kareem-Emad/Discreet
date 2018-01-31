@@ -4,11 +4,11 @@
             Facebook
             <img
             width="25" height="25"
-            src="https://cdn.pixabay.com/photo/2012/04/16/12/53/ghost-35852_960_720.png"/>Ghost
+            src="../../assets/ghost.png"/>Ghost
         </span>
-        <span class="example-spacer"></span>
+        <span class="example-spacer">
+        </span>
         <span class="example-icon">  
-<!-- https://static1.squarespace.com/static/5618bb18e4b0e976ee26aaf2/t/5618f289e4b0dfaa03490a1b/1516765552926/ -->
             <button mat-raised-button color="primary">Logout</button>
 
         </span>
@@ -72,7 +72,7 @@
                 <hr>
                 <p>
                     <img  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png " width="25" height="25" />
-                    Ragnar Lothbroke
+                    Martin Fowler
                 </p>
                 <p style="margin-top:19px;padding:12px;margin-bottom:12px">
                     Lorem Ipsum is simply dummy text of 
@@ -94,7 +94,7 @@
 
                 <div style="padding:11px">
                     <p>
-                        <img  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png " width="25" height="25" />
+                        <img  src="../../assets/profile.png " width="25" height="25" />
                         Forrest Gump
                     </p>
 
@@ -119,9 +119,11 @@
                     <form class="example-form">
                 
                         <mat-form-field class="example-full-width">
-                            <textarea   rows="3" matInput placeholder="Write your Answer"></textarea>
+                            <textarea matInput placeholder="Write your Answer" matTextareaAutosize matAutosizeMinRows="4"
+                                      matAutosizeMaxRows="10"></textarea>
                         </mat-form-field>
-    
+                        <button  type="button"  mat-raised-button color="primary">Post</button>
+
                     </form>  
 
                 </div>
