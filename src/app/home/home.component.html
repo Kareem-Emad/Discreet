@@ -1,7 +1,7 @@
 <mat-toolbar class="toolbar" color="primary">
     <mat-toolbar-row>
         <span>
-            Facebook
+            
             <img
             width="25" height="25"
             src="../../assets/ghost.png"/>Ghost
@@ -14,125 +14,206 @@
         </span>
     </mat-toolbar-row>
 </mat-toolbar>
-<button mat-fab color="primary" style="position: fixed;bottom:12px;right: 0;">-|-</button>
 
-<div class="container " style="margin-left:0;margin-top:19px;margin-right:0;">
-    <div class="row">
-        <div class="col-3" >
-                <mat-list role="list">
-                    <h3 mat-subheader>Groups</h3>
-                    <mat-list-item  role="listitem" >
-                            <a mat-button>
-                                <p>
-                                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
+
+<mat-drawer-container class="example-container" autosize style="margin-left:0;margin-top:0">
+    <mat-drawer  #drawer class="example-sidenav" mode="side" style="background:#333;padding-right:15px;">
+        <mat-list role="list">
+                <h3 mat-subheader style="color:white">Notifications</h3>
+                <mat-list-item  role="listitem"  >
+                        <a mat-raised-button>
+                            <p >
+                                <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
+                                Hossam Hasan posted in Group CAX
+                            </p>
+                        </a>
+                </mat-list-item>
+        
+                <mat-list-item  role="listitem" >
+                        <a mat-raised-button>
+                            <p >
+                                <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
+                                Ibrahim Hasan posted in Group CNN
+                            </p>
+                        </a>
+                </mat-list-item>
+                <mat-list-item  role="listitem" >
+                        <a mat-raised-button>
+                            <p >
+                                <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
+                                Kareem Emad posted in Group CMP
+                            </p>
+                        </a>
+                </mat-list-item>
+                <mat-list-item  role="listitem"  >
+                        <a mat-raised-button >
+                            <p >
+                                <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
+                                Abdo Kaseb posted in Group CMP
+                            </p>
+                        </a>
+                </mat-list-item>
+        
+                
+            <mat-divider style="background-color:white"></mat-divider>
+         </mat-list>   
+
+         <mat-list role="list">
+                <h3 mat-subheader style="color:white">Settings</h3>
+                <mat-list-item  role="listitem"  >
+                        <a mat-raised-button>
+                            <p >
+                                Join a Group
+                            </p>
+                        </a>
+                </mat-list-item>
+                <mat-list-item  role="listitem"  >
+                        <a mat-raised-button>
+                            <p >
+                                Create a Group
+                            </p>
+                        </a>
+                </mat-list-item>
+        
+                
+            <mat-divider style="background-color:white"></mat-divider>
+         </mat-list>  
+
+         </mat-drawer>
+    
+    <div class="example-sidenav-content" style="background:#f5f5f5;padding:15px">
+            <button mat-fab color="primary" (click)="drawer.toggle()" style="position: fixed;bottom:12px;right: 0;font-size:22px">+</button>
+
+
+            <div class="container " style="margin-left:0;margin-top:19px;margin-right:0;">
+                    <div class="row">
+                        <div class="col-3" >
+                                <mat-list role="list">
+                                    <h3 mat-subheader>Groups</h3>
+                                    <mat-list-item  role="listitem" >
+                                            <a mat-button (click)="gotogroup()">
+                                                <p>
+                                                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
+                                                    CEE group
+                                                </p>
+                                            </a>
+                                    </mat-list-item>
+                            
+                                    <mat-list-item  role="listitem" >
+                                            <a mat-button>
+                                                <p>
+                                                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
+                                                    CEE group
+                                                </p>
+                                            </a>
+                                    </mat-list-item>
+                            
+                                <mat-divider></mat-divider>
+                             </mat-list>
+                
+                        </div>
+                        <div class="col-9" >
+                            <div  style="background-color:white;padding:25px;">
+                                <form class="example-form">
+                                   
+                                    <mat-form-field class="example-full-width">
+                                        <textarea   rows="5" matInput placeholder="Write your Question"></textarea>
+                                    </mat-form-field>
+                              
+                                    <mat-form-field style="width:70%"> 
+                                        <mat-select placeholder="Select A group">
+                                            <mat-option value="option">You don't have any</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                    
+                    
+                                    <button class="sign_in_button" type="button"  mat-raised-button color="primary">Post</button>
+                                </form>  
+                
+                
+                            </div>
+                
+                            <div  style="background-color:white;padding:25px;margin-top:17px;">
+                                <h3>
+                                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="25" height="25" />
                                     CEE group
-                                </p>
-                            </a>
-                    </mat-list-item>
-            
-                    <mat-list-item  role="listitem" >
-                            <a mat-button>
+                                </h3>
+                                <hr>
                                 <p>
-                                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
-                                    CEE group
+                                    <img  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png " width="25" height="25" />
+                                    Martin Fowler
                                 </p>
-                            </a>
-                    </mat-list-item>
-            
-                <mat-divider></mat-divider>
-             </mat-list>
-
-        </div>
-        <div class="col-9" >
-            <div  style="background-color:white;padding:25px;">
-                <form class="example-form">
-                   
-                    <mat-form-field class="example-full-width">
-                        <textarea   rows="5" matInput placeholder="Write your Question"></textarea>
-                    </mat-form-field>
-              
-                    <mat-form-field style="width:70%"> 
-                        <mat-select placeholder="Select A group">
-                            <mat-option value="option">You don't have any</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-    
-    
-                    <button class="sign_in_button" type="button"  mat-raised-button color="primary">Post</button>
-                </form>  
-
-
-            </div>
-
-            <div  style="background-color:white;padding:25px;margin-top:17px;">
-                <h3>
-                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="25" height="25" />
-                    CEE group
-                </h3>
-                <hr>
-                <p>
-                    <img  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png " width="25" height="25" />
-                    Martin Fowler
-                </p>
-                <p style="margin-top:19px;padding:12px;margin-bottom:12px">
-                    Lorem Ipsum is simply dummy text of 
-                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
-                    it to make a type specimen book. It has survived not only five centuries,
-                     but also the leap into electronic typesetting, remaining essentially unchanged. 
-                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <img  style="margin-top:12px" width="100%" height="100%"
-                src="http://gulfinfotech.com/wp-content/uploads/revslider/rev_slider_example/placeholder-blue.png"  />
-
-                <p style="color:darkgray">x votes, y answers</p>
-                <div>
-                    <button mat-button style="width:35%">Vote</button>
-                    <button mat-button style="width:35%">Answer</button>
-                </div>
-
-                <div style="padding:11px">
-                    <p>
-                        <img  src="../../assets/profile.png " width="25" height="25" />
-                        Forrest Gump
-                    </p>
-
-                    <p style="padding:18px">
-                        I don't know :V
-                    </p>
-                    <img  style="margin-top:12px" width="80%" height="80%"
-                    src="https://mytectra.in/wp-content/themes/michigan/images/course_no_image.png"  />
-
-                    <p style="color:darkgray">x up, y down</p>
-                    <div>
-                        <button mat-button style="width:35%">upVote</button>
-                        <button mat-button style="width:35%">downVote</button>
-                    </div>
-    
-                </div>
-
-
+                                <p style="margin-top:19px;padding:12px;margin-bottom:12px">
+                                    Lorem Ipsum is simply dummy text of 
+                                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+                                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+                                    it to make a type specimen book. It has survived not only five centuries,
+                                     but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                </p>
+                                <img  style="margin-top:12px" width="100%" height="100%"
+                                src="http://gulfinfotech.com/wp-content/uploads/revslider/rev_slider_example/placeholder-blue.png"  />
                 
-
-                <div>
-                    <form class="example-form">
+                                <p style="color:darkgray">x votes, y answers</p>
+                                <div>
+                                    <button mat-button style="width:35%">Vote</button>
+                                    <button mat-button style="width:35%">Answer</button>
+                                </div>
                 
-                        <mat-form-field class="example-full-width">
-                            <textarea matInput placeholder="Write your Answer" matTextareaAutosize matAutosizeMinRows="4"
-                                      matAutosizeMaxRows="10"></textarea>
-                        </mat-form-field>
-                        <button  type="button"  mat-raised-button color="primary">Post</button>
-
-                    </form>  
-
+                                <div style="padding:11px">
+                                    <p>
+                                        <img  src="../../assets/profile.png " width="25" height="25" />
+                                        Forrest Gump
+                                    </p>
+                
+                                    <p style="padding:18px">
+                                        I don't know :V
+                                    </p>
+                                    <img  style="margin-top:12px" width="80%" height="80%"
+                                    src="https://mytectra.in/wp-content/themes/michigan/images/course_no_image.png"  />
+                
+                                    <p style="color:darkgray">x up, y down</p>
+                                    <div>
+                                        <button mat-button style="width:35%">upVote</button>
+                                        <button mat-button style="width:35%">downVote</button>
+                                    </div>
+                    
+                                </div>
+                
+                
+                                
+                
+                                <div>
+                                    <form class="example-form">
+                                
+                                        <mat-form-field class="example-full-width">
+                                            <textarea matInput placeholder="Write your Answer" matTextareaAutosize matAutosizeMinRows="4"
+                                                      matAutosizeMaxRows="10"></textarea>
+                                        </mat-form-field>
+                                        <button  type="button"  mat-raised-button color="primary">Post</button>
+                
+                                    </form>  
+                
+                                </div>
+                                
+                            </div>
+                
+                
+                
+                
+                        </div>
+                      </div>
                 </div>
                 
-            </div>
 
 
 
 
-        </div>
-      </div>
-</div>
+
+    </div>
+    
+</mat-drawer-container>
+
+
+
