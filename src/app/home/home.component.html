@@ -1,11 +1,17 @@
 <mat-toolbar class="toolbar" color="primary">
     <mat-toolbar-row>
         <span>Discreet</span>
+        <span class="example-spacer"></span>
+        <span class="example-icon">  
+
+            <button mat-raised-button color="primary">Logout</button>
+
+        </span>
     </mat-toolbar-row>
 </mat-toolbar>
-<button mat-fab color="primary" style="position: fixed;bottom:12px;right: 0;">HI</button>
+<button mat-fab color="primary" style="position: fixed;bottom:12px;right: 0;">-|-</button>
 
-<div class="container " style="margin-left:0;margin-top:19px;">
+<div class="container " style="margin-left:0;margin-top:19px;margin-right:0;">
     <div class="row">
         <div class="col-3" >
                 <mat-list role="list">
@@ -32,7 +38,7 @@
              </mat-list>
 
         </div>
-        <div class="col-8" >
+        <div class="col-9" >
             <div  style="background-color:white;padding:25px;">
                 <form class="example-form">
                    
@@ -41,8 +47,8 @@
                     </mat-form-field>
               
                     <mat-form-field style="width:70%"> 
-                        <mat-select placeholder="Select">
-                            <mat-option value="option">Option</mat-option>
+                        <mat-select placeholder="Select A group">
+                            <mat-option value="option">You don't have any</mat-option>
                         </mat-select>
                     </mat-form-field>
     
@@ -59,7 +65,11 @@
                     CEE group
                 </h3>
                 <hr>
-                <p style="margin-top:19px;padding-left:12px;margin-bottom:12px">
+                <p>
+                    <img  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png " width="25" height="25" />
+                    Ragnar Lothbroke
+                </p>
+                <p style="margin-top:19px;padding:12px;margin-bottom:12px">
                     Lorem Ipsum is simply dummy text of 
                     the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
                     text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
@@ -71,49 +81,44 @@
                 <img  style="margin-top:12px" width="100%" height="100%"
                 src="http://gulfinfotech.com/wp-content/uploads/revslider/rev_slider_example/placeholder-blue.png"  />
 
+                <p style="color:darkgray">x votes, y answers</p>
+                <div>
+                    <button mat-button style="width:35%">Vote</button>
+                    <button mat-button style="width:35%">Answer</button>
+                </div>
+
+                <div>
+                    <p>
+                        <img  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png " width="25" height="25" />
+                        Forrest Gump
+                    </p>
+
+                    <p style="padding:18px">
+                        I don't know :V
+                    </p>
+                    <img  style="margin-top:12px" width="80%" height="80%"
+                    src="https://mytectra.in/wp-content/themes/michigan/images/course_no_image.png"  />
+
+                    <p style="color:darkgray">x up, y down</p>
+                    <div>
+                        <button mat-button style="width:35%">upVote</button>
+                        <button mat-button style="width:35%">downVote</button>
+                    </div>
+    
+                </div>
+
+                <div>
+                    <form class="example-form">
+                
+                        <mat-form-field class="example-full-width">
+                            <textarea   rows="3" matInput placeholder="Write your Answer"></textarea>
+                        </mat-form-field>
+    
+                    </form>  
+
+                </div>
+                
             </div>
-
-            <div  style="background-color:white;padding:25px;margin-top:17px;">
-                <h3>
-                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="25" height="25" />
-                    CEE group
-                </h3>
-                <hr>
-                <p style="margin-top:19px;padding-left:12px;margin-bottom:12px">
-                    Lorem Ipsum is simply dummy text of 
-                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
-                    it to make a type specimen book. It has survived not only five centuries,
-                     but also the leap into electronic typesetting, remaining essentially unchanged. 
-                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <img  style="margin-top:12px" width="100%" height="100%"
-                src="http://gulfinfotech.com/wp-content/uploads/revslider/rev_slider_example/placeholder-blue.png"  />
-
-            </div>
-
-
-            <div  style="background-color:white;padding:25px;margin-top:17px;">
-                <h3>
-                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="25" height="25" />
-                    CEE group
-                </h3>
-                <hr>
-                <p style="margin-top:19px;padding-left:12px;margin-bottom:12px">
-                    Lorem Ipsum is simply dummy text of 
-                    the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                    text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
-                    it to make a type specimen book. It has survived not only five centuries,
-                     but also the leap into electronic typesetting, remaining essentially unchanged. 
-                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-                <img  style="margin-top:12px" width="100%" height="100%"
-                src="http://gulfinfotech.com/wp-content/uploads/revslider/rev_slider_example/placeholder-blue.png"  />
-
-            </div>
-
 
 
 
