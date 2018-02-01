@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import {HomeComponent} from './home/home.component'
+import {HomeComponent,DialogDataExampleDialog,CreateDialog} from './home/home.component'
 
 import {
   MatAutocompleteModule,
@@ -55,8 +55,15 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    GroupComponent
+    GroupComponent,
+    DialogDataExampleDialog,
+    CreateDialog
   ],
+  entryComponents: [
+    DialogDataExampleDialog,
+    CreateDialog
+  ],
+
   imports: [
     RouterModule.forRoot(appRoutes),
     MatAutocompleteModule,

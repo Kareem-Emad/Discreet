@@ -1,11 +1,10 @@
 <mat-toolbar class="toolbar" color="primary">
     <mat-toolbar-row>
-        <span>
-            
+        <a href="http://localhost:4200/home" style="color:white;text-decoration: none;">
             <img
             width="25" height="25"
             src="https://pre00.deviantart.net/335a/th/pre/f/2010/340/2/3/ban_facebook_by_nameisraj-d34di1x.png"/>Facebook
-        </span>
+        </a>
         <span class="example-spacer">
         </span>
         <span class="example-icon">  
@@ -61,14 +60,14 @@
          <mat-list role="list">
                 <h3 mat-subheader style="color:white">Settings</h3>
                 <mat-list-item  role="listitem"  >
-                        <a mat-raised-button>
+                        <a mat-raised-button (click)="joinGroup()">
                             <p >
                                 Join a Group
                             </p>
                         </a>
                 </mat-list-item>
                 <mat-list-item  role="listitem"  >
-                        <a mat-raised-button>
+                        <a mat-raised-button (click)="createGroup()">
                             <p >
                                 Create a Group
                             </p>
@@ -175,8 +174,8 @@
                 
                                     <p style="color:darkgray">x up, y down</p>
                                     <div>
-                                        <button mat-button style="width:35%">upVote</button>
-                                        <button mat-button style="width:35%">downVote</button>
+                                        <button mat-button style="width:35%">approve</button>
+                                        <button mat-button style="width:35%">disapprove</button>
                                     </div>
                     
                                 </div>
@@ -191,7 +190,7 @@
                                             <textarea matInput placeholder="Write your Answer" matTextareaAutosize matAutosizeMinRows="4"
                                                       matAutosizeMaxRows="10"></textarea>
                                         </mat-form-field>
-                                        <button  type="button"  mat-raised-button color="primary">Post</button>
+                                        <button  type="button"  mat-raised-button color="primary">Leave Answer</button>
                 
                                     </form>  
                 
