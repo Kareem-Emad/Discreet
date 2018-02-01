@@ -1,3 +1,60 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>
+        <img
+        width="25" height="25"
+        src="https://pre00.deviantart.net/335a/th/pre/f/2010/340/2/3/ban_facebook_by_nameisraj-d34di1x.png"/>
+      Facebook</span>
+    <span class="example-spacer"></span>
+    <div>
+      <input  class="form-control" aria-describedby="emailHelp" placeholder="email">
+    </div>
+    <div style="margin-left:9px;margin-right:9px;">
+      <input  class="form-control" aria-describedby="emailHelp" placeholder="password">
+    </div>
+    <button  type="button"   on-tap="dosomething()" mat-raised-button color="primary">Login</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<div class="container " style="margin-top:51px;">
+  <div class="row">
+    <div class="col-6" style="justify-content:center">
+      <img src="https://cdn.pixabay.com/photo/2017/11/12/18/32/book-2943383_960_720.png" />
+      <h3 style="font-style:italic;font-weight:normal"> Get off the radar for the final days</h3>
+
+    </div>
+    <div class="col-6" style="padding-left:35px;padding-top:35px">
+      
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Gmail" >
+        </mat-form-field>
+        <span 
+        matTooltip="We use Gmail to protect you from dealing with fraud accounts and notifying with any problem concering your account">
+        why?</span>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Anonymous name" >
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+        </mat-form-field>
+        
+        <div class="form-group">
+            <button class="sign_in_button" type="button" on-tap="dosomething()" mat-raised-button color="primary">Sign up</button>
+        </div>
+      </form>  
+
+
+    </div>
+
+
+  </div>
+</div>
+
+<!--
 
 <mat-grid-list  cols="3" rowHeight="2:1">
   <mat-grid-tile></mat-grid-tile>
@@ -43,3 +100,4 @@
   <mat-grid-tile></mat-grid-tile>
 
 </mat-grid-list>
+-->

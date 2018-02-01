@@ -14,4 +14,8 @@ export class HomeComponent {
   gotogroup(){
     this.router.navigate(['groups']);
   }
+  logout(){
+    this.router.navigate(['']);
+
+  }
 }
