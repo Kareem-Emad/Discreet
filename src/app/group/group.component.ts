@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {Angular2TokenService} from "angular2-token";
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { DialogDataExampleDialog, CreateDialog } from '../home/home.component';
+
 
 
 @Component({
@@ -10,7 +13,7 @@ import {Angular2TokenService} from "angular2-token";
 })
 export class GroupComponent implements OnInit {
 
-  constructor(private router: Router,private authToken: Angular2TokenService) { }
+  constructor(private router: Router,private authToken: Angular2TokenService,public dialog: MatDialog) { }
 
   ngOnInit() {
     this.authToken.init({apiBase: 'http://localhost:3000/api'}  );
@@ -24,6 +27,12 @@ export class GroupComponent implements OnInit {
   }
   dosomething(){
     this.router.navigate(['']);
+  }
+  joinGroup(){
+    this.dialog.open(DialogDataExampleDialog, {});
+  }
+  createGroup(){
+    this.dialog.open(CreateDialog, {});    
   }
 
 }
