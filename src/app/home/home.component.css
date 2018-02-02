@@ -39,4 +39,12 @@ main{
   .example-icon {
     padding: 0 14px;
   }
-  
+  .list-group a:hover{
+      background-color: #0275d8;
+      color:white;
+
+  }
+  .l_item{
+      width: 100%;
+      border-radius: unset;
+  }

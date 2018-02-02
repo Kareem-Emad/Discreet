@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {Angular2TokenService} from "angular2-token";
 
 
 @Component({
@@ -10,12 +11,26 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 })
 export class HomeComponent {
   title = 'home';
-  constructor(private router: Router,public dialog: MatDialog){
+  constructor(private router: Router,public dialog: MatDialog,private authToken: Angular2TokenService){
+  }
+  ngOnInit() {
+    this.authToken.init({apiBase: 'http://localhost:3000/api'}  );
+    this.authToken.validateToken().subscribe(
+      res =>      console.log(res),
+      error => {
+        console.log(error)
+        this.router.navigate(['']);
+      }  
+  );
   }
   gotogroup(){
     this.router.navigate(['groups']);
   }
   logout(){
+    this.authToken.signOut().subscribe(
+      res =>      console.log(res),
+      error =>    console.log(error)
+    );
     this.router.navigate(['']);
   }
   joinGroup(){

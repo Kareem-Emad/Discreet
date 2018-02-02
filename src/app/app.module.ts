@@ -40,6 +40,11 @@ import {
 } from '@angular/material';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { Angular2TokenService } from 'angular2-token';
+import { HttpModule } from '@angular/http';
+
+import { FormsModule } from '@angular/forms';
+
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { GroupComponent } from './group/group.component';
@@ -66,6 +71,8 @@ const appRoutes: Routes = [
 
   imports: [
     RouterModule.forRoot(appRoutes),
+    FormsModule,
+    HttpModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -100,7 +107,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
 
   ],
-  providers: [],
+  providers: [Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

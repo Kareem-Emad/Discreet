@@ -7,10 +7,10 @@
     </a>
     <span class="example-spacer"></span>
     <div>
-      <input  class="form-control" aria-describedby="emailHelp" placeholder="email">
+      <input  class="form-control" [(ngModel)]="email" aria-describedby="emailHelp" placeholder="email">
     </div>
     <div style="margin-left:9px;margin-right:9px;">
-      <input  class="form-control" aria-describedby="emailHelp" placeholder="password">
+      <input  class="form-control" [(ngModel)]="password" aria-describedby="emailHelp" placeholder="password">
     </div>
     <button  type="button"   on-tap="dosomething()" mat-raised-button color="primary">Login</button>
   </mat-toolbar-row>
@@ -28,22 +28,22 @@
       
       <form class="example-form">
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Gmail" >
+          <input matInput placeholder="Gmail"    [ngModelOptions]="{standalone: true}" [(ngModel)]="s_email">
         </mat-form-field>
         <span 
         matTooltip="We use Gmail to protect you from dealing with fraud accounts and notifying with any problem concering your account">
         why?</span>
   
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Anonymous name" >
+          <input matInput  [(ngModel)]="name" placeholder="Anonymous name"  [ngModelOptions]="{standalone: true}" >
         </mat-form-field>
         
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+          <input matInput  [(ngModel)]="s_password"   [ngModelOptions]="{standalone: true}" placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
         </mat-form-field>
         
         <div class="form-group">
-            <button class="sign_in_button" type="button" on-tap="dosomething()" mat-raised-button color="primary">Sign up</button>
+            <button class="sign_in_button"  type="button" on-tap="signUp()" mat-raised-button color="primary">Sign up</button>
         </div>
       </form>  
 

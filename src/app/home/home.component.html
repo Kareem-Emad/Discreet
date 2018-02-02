@@ -1,5 +1,5 @@
-<mat-toolbar class="toolbar" color="primary">
-    <mat-toolbar-row>
+<mat-toolbar  color="primary">
+    <mat-toolbar-row >
         <a href="http://localhost:4200/home" style="color:white;text-decoration: none;">
             <img
             width="25" height="25"
@@ -15,50 +15,18 @@
 </mat-toolbar>
 
 
-<mat-drawer-container class="example-container" autosize style="margin-left:0;margin-top:0">
-    <mat-drawer  #drawer class="example-sidenav" mode="side" style="background:#333;padding-right:15px;">
-        <mat-list role="list">
-                <h3 mat-subheader style="color:white">Notifications</h3>
-                <mat-list-item  role="listitem"  >
-                        <a mat-raised-button>
-                            <p >
-                                <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
-                                Martin Fowler posted in Group CAX
-                            </p>
-                        </a>
-                </mat-list-item>
-        
-                <mat-list-item  role="listitem" >
-                        <a mat-raised-button>
-                            <p >
-                                <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
-                                Martin Fowler posted in Group CNN
-                            </p>
-                        </a>
-                </mat-list-item>
-                <mat-list-item  role="listitem" >
-                        <a mat-raised-button>
-                            <p >
-                                <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
-                                Kareem Emad posted in Group CMP
-                            </p>
-                        </a>
-                </mat-list-item>
-                <mat-list-item  role="listitem"  >
-                        <a mat-raised-button >
-                            <p >
-                                <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
-                                Zootopian posted in Group CMP
-                            </p>
-                        </a>
-                </mat-list-item>
-        
-                
-            <mat-divider style="background-color:white"></mat-divider>
-         </mat-list>   
+<mat-drawer-container class="example-container" autosize style="margin-left:0;margin-top:0;">
+    <mat-drawer  #drawer class="example-sidenav" mode="side" style="background:#333;">
+        <h4 mat-subheader style="color:white">Notifications</h4>
+        <div class="list-group" style="width:100%">
+            <a href="#"  class="list-group-item l_item  list-group-item-action">Zootopian posted in Group CAX </a>
+            <a href="#" class="list-group-item l_item list-group-item-action">Zootopian posted in Group CEA</a>
+            <a href="#" class="list-group-item l_item list-group-item-action">Martin Fowler posted in Group CAX</a>
+            <a href="#" class="list-group-item l_item list-group-item-action">Kareem posted in Group ADE</a>
+        </div>  
+        <h4 mat-subheader style="color:white">Settings</h4>
 
          <mat-list role="list">
-                <h3 mat-subheader style="color:white">Settings</h3>
                 <mat-list-item  role="listitem"  >
                         <a mat-raised-button (click)="joinGroup()">
                             <p >
