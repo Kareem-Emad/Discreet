@@ -52,7 +52,9 @@ import { GroupComponent } from './group/group.component';
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent},
-  { path: 'groups',component: GroupComponent}
+  { path: 'groups/:id',component: GroupComponent},
+  { path: '**', redirectTo: '', pathMatch: 'full' },
+
 ];
 
 @NgModule({

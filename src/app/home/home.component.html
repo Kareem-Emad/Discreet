@@ -49,7 +49,8 @@
          </mat-drawer>
     
     <div class="example-sidenav-content" style="background:#f5f5f5;padding:15px">
-            <button mat-fab color="primary" (click)="drawer.toggle()" style="position: fixed;bottom:12px;right: 0;font-size:22px">+</button>
+            <button mat-fab color="primary"  
+             (click)="drawer.toggle();toggle_marker()" style="position: fixed;bottom:12px;right: 0;font-size:22px">{{notf_val}}</button>
 
 
             <div class="container " style="margin-left:0;margin-top:19px;margin-right:0;">
@@ -57,20 +58,12 @@
                         <div class="col-3" >
                                 <mat-list role="list">
                                     <h3 mat-subheader>Groups</h3>
-                                    <mat-list-item  role="listitem" >
-                                            <a mat-button (click)="gotogroup()">
+                                    
+                                    <mat-list-item  *ngFor="let item of groups" role="listitem" >
+                                            <a mat-button (click)="gotogroup(item)" style="padding-left:0;text-align:left">
                                                 <p>
                                                     <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
-                                                    CEE group
-                                                </p>
-                                            </a>
-                                    </mat-list-item>
-                            
-                                    <mat-list-item  role="listitem" >
-                                            <a mat-button>
-                                                <p>
-                                                    <img  src="https://cdn4.iconfinder.com/data/icons/oakcons-2/16/Image-512.png" width="15" height="15" />
-                                                    CEE group
+                                                    {{item.title}}
                                                 </p>
                                             </a>
                                     </mat-list-item>
@@ -84,17 +77,17 @@
                                 <form class="example-form">
                                    
                                     <mat-form-field class="example-full-width">
-                                        <textarea   rows="5" matInput placeholder="Write your Question"></textarea>
+                                        <textarea  [ngModelOptions]="{standalone: true}"  [(ngModel)]="q_content" rows="5" matInput placeholder="Write your Question"></textarea>
                                     </mat-form-field>
                               
                                     <mat-form-field style="width:70%"> 
-                                        <mat-select placeholder="Select A group">
-                                            <mat-option value="option">You don't have any</mat-option>
+                                        <mat-select [(value)]="selectedGroup"  placeholder="Select A group">
+                                            <mat-option *ngFor="let item of groups"  [value]="item.title" >{{item.title}}</mat-option>
                                         </mat-select>
                                     </mat-form-field>
                     
                     
-                                    <button class="sign_in_button" type="button"  mat-raised-button color="primary">Post</button>
+                                    <button class="sign_in_button" type="button" (tap)="postQuestion()"  mat-raised-button color="primary">Post</button>
                                 </form>  
                 
                 
@@ -107,7 +100,7 @@
                                 </h3>
                                 <hr>
                                 <p>
-                                    <img  src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png " width="25" height="25" />
+                                    <img  src="../../assets/profile.png " width="25" height="25" />
                                     Martin Fowler
                                 </p>
                                 <p style="margin-top:19px;padding:12px;margin-bottom:12px">

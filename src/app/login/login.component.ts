@@ -18,7 +18,18 @@ export class LoginComponent implements OnInit {
   s_password ="";
   name="";
   ngOnInit() {
-    this.authToken.init({apiBase: 'http://localhost:3000/api'}  );
+    
+    this.authToken.validateToken()
+    .subscribe(
+      res =>      {
+        console.log(res)
+        this.router.navigate(['home']);
+      },
+      error => {
+        console.log("not authenticated , need to log in")
+      }  
+    )
+  
   }
   dosomething(){
     console.log(this.email)

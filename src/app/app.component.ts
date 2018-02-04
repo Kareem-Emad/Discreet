@@ -12,16 +12,9 @@ export class AppComponent {
   title = 'app';
   hide = true;
   constructor(private authToken: Angular2TokenService){
-    /*
-    this.authToken.init({apiBase: 'http://localhost:3000/api'}  );
-    this.authToken.signIn({
-      email:    'example@example.org',
-      password: 'secretPassword'
-  }).subscribe(
-      res =>      console.log(res),
-      error =>    console.log(error)
-  );
-  */
+    //https://shielded-lowlands-81772.herokuapp.com/api
+    this.authToken.init({apiBase: 'http://localhost:3000/api'}  )
+
   }
 
 }
