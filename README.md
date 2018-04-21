@@ -6,7 +6,7 @@ Discreet is a anonymity-based platform targeting students to help them concentra
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+Discreet uses a number of open source projects to work properly:
 
 * Angular 5
 * Angular material
